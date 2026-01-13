@@ -1,0 +1,67 @@
+/* UPDATE FOR PROJECT IMAGES */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    /* Remove previous padding/overflow if needed */
+    padding: 0;
+}
+
+.project-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-icon {
+    display: none;
+    /* Hide icon if using images */
+}
+
+/* UPDATE FOR CURSOR - Mix Blend Mode */
+body {
+    cursor: none;
+    /* Hide default cursor */
+}
+
+.cursor-dot {
+    background-color: white;
+    mix-blend-mode: difference;
+    width: 10px;
+    height: 10px;
+}
+
+.cursor-outline {
+    border-color: white;
+    mix-blend-mode: difference;
+    background: rgba(255, 255, 255, 0.1);
+    width: 40px;
+    height: 40px;
+}
+
+/* Cursor Hover State */
+body a:hover~.cursor-outline,
+body button:hover~.cursor-outline,
+.project-card:hover~.cursor-outline {
+    transform: translate(-50%, -50%) scale(1.5);
+    background: rgba(255, 255, 255, 0.3);
+    border-color: transparent;
+}
