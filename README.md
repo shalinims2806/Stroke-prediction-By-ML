@@ -1,119 +1,80 @@
-# Shalini M — AI-Themed Developer Portfolio
+# Early Stroke Risk Prediction Platform
 
-> Futuristic AI-themed interactive portfolio built with Next.js 15, Three.js, and Framer Motion.
+[![Vercel](https://img.shields.io/badge/deploy-vercel-000000?logo=vercel&logoColor=white)](https://vercel.com)
+[![Python](https://img.shields.io/badge/python-3.12-blue?logo=python)](https://www.python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![Next.js](https://img.shields.io/badge/Next.js-000000?logo=next.js&logoColor=white)](https://nextjs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 
-**Live:** [shalinims2806.github.io](https://shalinims2806.github.io) &nbsp;|&nbsp;
-**LinkedIn:** [linkedin.com/in/shalinim1228](https://linkedin.com/in/shalinim1228) &nbsp;|&nbsp;
-**GitHub:** [github.com/shalinim1228](https://github.com/shalinim1228)
+A production-ready healthcare AI platform for early stroke risk assessment.
 
----
+The repository contains two separate projects:
+
+- `frontend/` — Next.js 15 production UI with a modern landing page, prediction dashboard, analytics, and explainability.
+- `backend/` — FastAPI service for stroke risk prediction with validation, health checks, and model metadata.
 
 ## Features
 
-- **3D Animated Hero** — rotating torus knot, icosahedron, and spheres via raw Three.js
-- **Particle Neural Network** — animated canvas background with connecting lines
-- **Glassmorphism UI** — premium frosted-glass cards throughout
-- **Smooth Scroll Animations** — Framer Motion scroll-triggered reveals on every section
-- **Experience Timeline** — animated vertical timeline with 3 roles
-- **Skills Showcase** — tabbed categories with floating tech badge cards
-- **Project Cards** — 3D mouse-tilt effect on hover with filter system
-- **Enterprise Projects** — SVG world map with animated location markers
-- **Contact Form CRM** — submissions stored in Google Sheets + Resend email notifications
-- **Mobile-first Responsive** — fully responsive across all screen sizes
-- **SEO Optimized** — metadata, OpenGraph, Twitter cards
+- Modern AI healthcare landing page and dashboard
+- Predict stroke risk from clinical profile inputs with patient onboarding
+- SHAP-style feature contribution explanations
+- Interactive analytics with Recharts and platform metrics
+- PDF report generation for each risk assessment
+- Google Sheets integration for patient event logging
+- Professional glassmorphism UI and dark theme
+- FastAPI backend with validation and security headers
+- Deployment-ready for Vercel frontend and Render backend
+- GitHub Actions CI for frontend build and backend validation
 
----
+## Repository layout
 
-## Tech Stack
+- `frontend/` — Next.js application
+- `backend/` — FastAPI application
+- `model/` — ML pipeline and artifact support
+- `dataset/` — Sample dataset and dataset documentation
+- `docs/` — Architecture, deployment, and API guides
+- `legacy-portfolio/` — Archived older portfolio project
 
-| Category | Technologies |
-|---|---|
-| Framework | Next.js 15 (App Router) |
-| Language | TypeScript 5 |
-| Styling | Tailwind CSS 3 |
-| Animations | Framer Motion 11 |
-| 3D | Three.js (raw imperative API) |
-| Icons | Lucide React |
-| Email | Resend |
-| Lead Storage | Google Sheets via Apps Script |
-| Deployment | Vercel |
+## Local setup
 
----
-
-## Portfolio Sections
-
-1. **Hero** — 3D floating geometry, typing animation, CTA buttons
-2. **About** — Profile summary, animated stats counters
-3. **Skills** — Programming, Databases, Zoho & AI, Tools, Soft Skills
-4. **Experience** — TekyDoct, Tap Academy, Race2Cloud timelines
-5. **Projects** — ML, Full Stack, Zoho app showcase
-6. **Enterprise** — International client projects with world map
-7. **Certifications** — Java Full Stack, Zoho CRM, NPTEL, Python
-8. **Education** — MCA and B.Sc Mathematics
-9. **Contact** — Live form with Google Sheets CRM and email
-
----
-
-## Local Setup
-
-### Prerequisites
-- Node.js 18.17+
-- npm
-
-### Installation
+### Frontend
 
 ```bash
-git clone https://github.com/shalinims2806/Portfolio.git
-cd Portfolio
+cd frontend
 npm install
+npm run dev
 ```
 
-### Environment Variables
+### Backend
 
 ```bash
-copy .env.local.example .env.local
+cd backend
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-Fill in `.env.local`:
+### Environment variables
 
-```env
-GOOGLE_APPS_SCRIPT_URL=https://script.google.com/macros/s/YOUR_ID/exec
-RESEND_API_KEY=re_YOUR_KEY
-EMAIL_FROM=onboarding@resend.dev
-EMAIL_TO=your@email.com
-```
-
-See [CONTACT_SETUP.md](CONTACT_SETUP.md) for full Google Sheets + email setup.
-
-### Run
+Copy the example file and update the backend URL and optional Google Sheets webhook:
 
 ```bash
-npm run dev        # Development
-npm run build      # Production build
-npm run start      # Run production build
+copy .env.example .env
 ```
 
----
+Then set:
 
-## Deployment on Vercel
+- `NEXT_PUBLIC_API_URL` to your backend address
+- `GOOGLE_SHEETS_WEBHOOK_URL` to a Google Apps Script webhook or webhook endpoint for patient event logging
 
-1. Push to GitHub
-2. Go to [vercel.com](https://vercel.com) → **Add New Project** → import this repo
-3. Add environment variables in **Settings → Environment Variables**
-4. Click **Deploy**
+## Deployment
 
-Every push to `main` auto-deploys.
+Refer to the deployment guide in `docs/deployment.md`.
 
----
+## API reference
 
-## Contact
+Open `docs/api.md` for endpoint details and example payloads.
 
-**Shalini M** — Zoho Developer & Full Stack Engineer
+## Notes
 
-- Email: [shalinims2806@gmail.com](mailto:shalinims2806@gmail.com)
-- LinkedIn: [linkedin.com/in/shalinim1228](https://linkedin.com/in/shalinim1228)
-- GitHub: [github.com/shalinim1228](https://github.com/shalinim1228)
-
----
-
-*Built with Next.js 15, Three.js, Framer Motion, and a futuristic vision.*
+The backend uses a fallback risk scoring method if a pre-trained model artifact is unavailable. For true production deployment, train and store a model artifact in `model/artifacts/best_model.pkl`.

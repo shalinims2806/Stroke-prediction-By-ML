@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: early-stroke-risk-backend
+    env: python
+    region: oregon
+    plan: starter
+    buildCommand: "pip install -r backend/requirements.txt"
+    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port 8000"
+    envVars:
+      - key: BACKEND_PORT
+        value: "8000"
+      - key: BACKEND_HOST
+        value: "0.0.0.0"
+      - key: ALLOWED_ORIGINS
+        value: "https://early-stroke-risk.vercel.app, http://localhost:3000"

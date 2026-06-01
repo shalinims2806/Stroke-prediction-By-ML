@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shalini | Zoho Developer & Full-Stack Learner</title>
+    <meta name="description"
+        content="Portfolio of Shalini - Zoho Developer, Java Full-Stack Learner, and Business Analytics Enthusiast.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("P6Buo2tYb9aTCFyJg");
+        })();
+    </script>
+    <link rel="stylesheet" href="style_new.css">
+</head>
+
+<body>
+    <!-- Cursor elements removed -->
+
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#" class="logo">Shalini</a>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-list">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link btn-contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content hero-copy">
+                    <div class="hero-badge">Hello, I'm</div>
+                    <h1 class="hero-name">Shalini</h1>
+                    <h2 class="hero-title">
+                        <span class="typing-text">Freelance Zoho Developer</span>
+                    </h2>
+                    <p class="hero-text">
+                        I am a motivated technology professional with hands-on experience in Zoho applications, Java
+                        full-stack development, and data-driven solutions. I enjoy building real-world applications,
+                        automation systems, and analytical dashboards.
+                    </p>
+                    <div class="hero-buttons hero-actions">
+                        <a href="SHALINI Resume.pdf" download class="btn btn-primary"><i
+                                class="fa-solid fa-download"></i> Download Resume</a>
+                        <a href="#projects" class="btn btn-outline">View Work</a>
+                    </div>
+                    <div class="hero-highlights">
+                        <div><strong>3+</strong><span>Years experience</span></div>
+                        <div><strong>20+</strong><span>Zoho automations</span></div>
+                        <div><strong>15+</strong><span>Web & analytics projects</span></div>
+                    </div>
+                </div>
+                <div class="hero-image hero-image-wrapper">
+                    <div class="hero-blob"></div>
+                    <div class="hero-card image-container">
+                        <img src="WhatsApp Image 2026-01-05 at 7.07.19 PM.jpeg" alt="Shalini - Professional Photo"
+                            class="profile-img">
+                    </div>
+
+                    <!-- Floating stats cards for decoration -->
+                    <div class="float-card hero-floating card-1">
+                        <i class="fa-solid fa-code"></i>
+                        <span>Java Full-Stack</span>
+                    </div>
+                    <div class="float-card hero-floating card-2">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Data Analytics</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="line"></div>
+                </div>
+
+                <div class="about-content about-grid">
+                    <div class="about-text">
+                        <p>
+                            I have a strong academic background in <strong>Mathematics and Computer
+                                Applications</strong>, combined with practical experience in software development and
+                            Zoho platform customization. My interests lie in application development, machine learning,
+                            analytics, and enterprise automation.
+                        </p>
+                        <p>
+                            I am continuously improving my skills in Java, APIs, and data analysis while working on
+                            real-world projects. I thrive on solving practical business problems through technology.
+                        </p>
+
+                        <div class="about-cards education-grid">
+                            <div class="edu-card info-card">
+                                <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                                <div class="edu-info">
+                                    <h4>Master of Computer Applications (MCA)</h4>
+                                    <p>Focus: App Development, Software Engineering, DBs, ML</p>
+                                </div>
+                            </div>
+                            <div class="edu-card info-card">
+                                <div class="edu-icon"><i class="fa-solid fa-square-root-variable"></i></div>
+                                <div class="edu-info">
+                                    <h4>Bachelor of Mathematics</h4>
+                                    <p>Focus: Statistics, Linear Algebra, Calculus, Probability</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-header center-header">
+                    <h2 class="section-title">My Skills</h2>
+                    <p class="section-subtitle">Technical prowess & soft skills</p>
+                    <div class="line"></div>
+                </div>
+
+                <div class="skills-layout skills-grid"> <!-- New wrapper for flex/grid layout -->
+                    <div class="skills-image-content">
+                        <img src="https://placehold.co/600x400/2563EB/white?text=Top+Skills"
+                            alt="Technical Skills Illustration" class="skills-img">
+                    </div>
+
+                    <div class="skills-wrapper">
+                        <div class="skills-category skill-panel">
+                            <h3><i class="fa-solid fa-laptop-code"></i> Technical Skills</h3>
+                            <div class="skill-tags skill-list">
+                                <span class="skill-tag">Zoho Creator (Deluge)</span>
+                                <span class="skill-tag">Zoho Analytics</span>
+                                <span class="skill-tag">Zoho CRM/Desk/Books</span>
+                                <span class="skill-tag">Java (OOP/Full-Stack)</span>
+                                <span class="skill-tag">Machine Learning</span>
+                                <span class="skill-tag">SQL & DB Management</span>
+                                <span class="skill-tag">REST APIs & Webhooks</span>
+                                <span class="skill-tag">HTML/CSS/JS</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-category skill-panel">
+                            <h3><i class="fa-solid fa-user-gear"></i> Soft Skills</h3>
+                            <div class="skill-tags skill-list">
+                                <span class="skill-tag variant">Analytical Thinking</span>
+                                <span class="skill-tag variant">Problem Solving</span>
+                                <span class="skill-tag variant">Communication</span>
+                                <span class="skill-tag variant">Adaptability</span>
+                                <span class="skill-tag variant">Time Management</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section experience">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Experience</h2>
+                    <div class="line"></div>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Present</div>
+                        <div class="timeline-content timeline-card">
+                            <h3>Zoho Developer / Analyst</h3>
+                            <h4>Zoho Application Development & Analytics</h4>
+                            <p>
+                            <ul class="experience-list">
+                                <li>Developed Zoho Creator applications using Deluge scripting.</li>
+                                <li>Built comprehensive analytics dashboards and reports.</li>
+                                <li>Integrated Zoho apps with third-party APIs for seamless data flow.</li>
+                                <li>Debugged and optimized workflows for efficiency.</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects">
+            <div class="container">
+                <div class="section-header center-header">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">Real-world applications & automation</p>
+                    <div class="line"></div>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://placehold.co/600x400/2563EB/white?text=Stroke+Prediction"
+                                alt="Stroke Prediction ML">
+                        </div>
+                        <div class="project-content project-body">
+                            <h3>Early Stroke Prediction ML</h3>
+                            <p>Machine learning model to predict early stroke risk using data preprocessing and feature
+                                selection techniques. Applied ML concepts for healthcare decision support.</p>
+                            <div class="project-tags">
+                                <span>Machine Learning</span>
+                                <span>Python</span>
+                                <span>Healthcare</span>
+                            </div>
+                            <!-- Project Link Button -->
+                            <div style="margin-top: 1.5rem;">
+                                <a href="https://github.com/shalinims2806/Early-Stroke-Prediction" target="_blank"
+                                    class="btn btn-outline" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">View
+                                    Project</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://placehold.co/600x400/2563EB/white?text=Online+Grocery"
+                                alt="Grocery Store App">
+                        </div>
+                        <div class="project-content project-body">
+                            <h3>Online Grocery Store</h3>
+                            <p>Complete Java Full-Stack application with user auth, product catalog, cart, and order
+                                system. Uses Java backend with database integration.</p>
+                            <div class="project-tags">
+                                <span>Java</span>
+                                <span>Full-Stack</span>
+                                <span>Database</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://placehold.co/600x400/2563EB/white?text=Weather+App"
+                                alt="Weather Application">
+                        </div>
+                        <div class="project-content project-body">
+                            <h3>Weather Application</h3>
+                            <p>Real-time weather tracking app using external APIs to display temperature, humidity, and
+                                atmospheric conditions.</p>
+                            <div class="project-tags">
+                                <span>API Integration</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://placehold.co/600x400/2563EB/white?text=Procurement+App"
+                                alt="Procurement System">
+                        </div>
+                        <div class="project-content project-body">
+                            <h3>Procurement System</h3>
+                            <p>Zoho Creator system to automate purchase requests, approvals, and vendor workflows with
+                                reporting dashboards.</p>
+                            <div class="project-tags">
+                                <span>Zoho Creator</span>
+                                <span>Automation</span>
+                            </div>
+                            <div style="margin-top: 1.5rem;">
+                                <a href="https://www.linkedin.com/posts/shalinim1228_zohocreator-zohoanalytics-freelancedeveloper-activity-7388490430583115776-3C6k?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAE1YIt8BoVm4R9NP_S2PdYbrR4lN0OHMlVE"
+                                    target="_blank" class="btn btn-outline"
+                                    style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://placehold.co/600x400/2563EB/white?text=Hotel+Assets" alt="Asset Tracker">
+                        </div>
+                        <div class="project-content project-body">
+                            <h3>Hotel Asset Tracker</h3>
+                            <p>Application designed to track hotel assets and maintenance schedules, improving inventory
+                                visibility and utilization.</p>
+                            <div class="project-tags">
+                                <span>Asset Mgmt</span>
+                                <span>Tracking</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://placehold.co/600x400/2563EB/white?text=Employee+Mgmt"
+                                alt="Employee System">
+                        </div>
+                        <div class="project-content project-body">
+                            <h3>Employee Mgmt System</h3>
+                            <p>Comprehensive system for managing employee data, records, and automating HR-related
+                                workflows.</p>
+                            <div class="project-tags">
+                                <span>HR Tech</span>
+                                <span>Database</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 7 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://placehold.co/600x400/2563EB/white?text=Cab+Management"
+                                alt="Cab Management">
+                        </div>
+                        <div class="project-content project-body">
+                            <h3>Cab Management System</h3>
+                            <p>Operational app to manage drivers, trips, and cab allocation with automated operational
+                                reporting.</p>
+                            <div class="project-tags">
+                                <span>Operations</span>
+                                <span>Management</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Goals Section -->
+        <section class="section goals">
+            <div class="container">
+                <div class="goals-container">
+                    <div class="goals-box goal-card short-term">
+                        <h3><i class="fa-solid fa-flag"></i> Short-Term Goals</h3>
+                        <ul>
+                            <li>Strengthen Java full-stack skills</li>
+                            <li>Build scalable Zoho Creator apps</li>
+                            <li>Gain deep expertise in Analytics & ML</li>
+                        </ul>
+                    </div>
+                    <div class="goals-box goal-card highlight long-term">
+                        <h3><i class="fa-solid fa-eye"></i> Long-Term Goals</h3>
+                        <ul>
+                            <li>Become a Zoho Solution Architect</li>
+                            <li>Build AI-enabled enterprise solutions</li>
+                            <li>Create impactful healthcare & business apps</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <div class="contact-wrapper contact-grid">
+                    <div class="contact-info contact-panel">
+                        <h2>Let's Connect</h2>
+                        <p>I am open to opportunities in Zoho Development, Full-Stack projects, and Data Analytics.</p>
+
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>shalinims2806@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <span>linkedin.com/in/shalinim1228</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-brands fa-github"></i>
+                            <span>github.com/shalinims2806</span>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contact-form">
+                        <input type="hidden" name="to_name" value="Shalini"> <!-- Fix for Recipient Error -->
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" id="user_name" name="user_name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="user_email" name="user_email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="send-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Shalini. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
